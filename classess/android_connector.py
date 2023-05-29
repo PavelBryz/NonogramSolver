@@ -1,3 +1,5 @@
+from time import sleep
+
 from PIL.Image import Image
 from com.dtmilano.android.viewclient import ViewClient
 from classess.scenarios import Scenario
@@ -10,7 +12,9 @@ class AndroidConnector:
 
     def prepare_image(self):
         scr: Image = self.device.takeSnapshot(reconnect=True)
+        sleep(0.5)
         scr.save(r"images\scr.png")
+        sleep(0.5)
         return scr
 
     def press_boxes(self, board, scenario: Scenario):

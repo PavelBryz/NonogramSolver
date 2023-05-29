@@ -93,7 +93,7 @@ class MediumLevelScenario(Scenario):
 
     @property
     def size_of_number(self):
-        return 20
+        return 18
 
     @property
     def num_of_elements(self):
